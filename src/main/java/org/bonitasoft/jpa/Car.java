@@ -29,7 +29,7 @@ public class Car implements Serializable {
     @GeneratedValue
     private Long persistenceId;
     
-    @ElementCollection(fetch=FetchType.LAZY)
+    @ElementCollection(fetch=FetchType.EAGER)
     private List<Wheel> wheels;
     
 }
