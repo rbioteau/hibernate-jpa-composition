@@ -31,6 +31,11 @@ public class JPACompositionTest {
             Car car = new Car();
             car.setWheels(Arrays.asList(new Wheel(54),new Wheel(54)));
             entityManager.persist(car);
+            
+            Monocycle mono = new Monocycle();
+            mono.setSize(3);
+            mono.setWheel(new Wheel(12));
+            entityManager.persist(mono);
         });
         
         inTx(entityManager, () -> {
